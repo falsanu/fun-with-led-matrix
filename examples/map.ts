@@ -17,7 +17,6 @@ const nextColor = (f: number, t: number): number => {
     matrix.afterSync((_, __, t) =>
       matrix.map(([_, __, i]) => nextColor(freqs[i], t))
     );
-
     matrix.sync();
   } catch (error) {
     console.error(error);

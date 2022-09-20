@@ -11,7 +11,7 @@ import { matrixOptions, runtimeOptions } from './_config';
 
 enum Colors {
   black = 0x000000,
-  red = 0xff0000,
+  red = 0xffff00,
   green = 0x00ff00,
   blue = 0x0000ff,
   magenta = 0xff00ff,

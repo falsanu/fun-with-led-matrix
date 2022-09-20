@@ -12,12 +12,13 @@ export const matrixOptions: MatrixOptions = {
   ...LedMatrix.defaultMatrixOptions(),
   rows: 64,
   cols: 64,
-  chainLength: 2,
+  chainLength: 3,
   hardwareMapping: GpioMapping.Regular,
   parallel: 2,
-  // panelType: 'FM6127',
+  panelType: 'FM6126A',
   // limitRefreshRateHz: 1,
   showRefreshRate: true,
+
   // pixelMapperConfig: LedMatrixUtils.encodeMappers(
   //   { type: PixelMapperType.Chainlink }
   // ),
