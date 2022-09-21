@@ -36,3 +36,5 @@ class Pulser {
     console.error(error);
   }
 })();
+
+// get video stats (about 61MB)
