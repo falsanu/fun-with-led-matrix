@@ -62,7 +62,8 @@ class Bubble {
 
   draw() {
     this.m.fgColor(this.color);
-    this.m.drawCircle(this.pos.x, this.pos.y, 1);
+    // this.m.drawCircle(this.pos.x, this.pos.y, 1);
+    this.m.setPixel(this.pos.x, this.pos.y);
   }
 }
 function magSq(v: Vector): number {
@@ -78,7 +79,7 @@ function setLimit(max: number, v: Vector): Vector {
   return v;
 }
 
-(async () => {
+(() => {
   try {
     const matrix = new LedMatrix(matrixOptions, runtimeOptions);
     const width = matrix.width();
@@ -109,6 +110,7 @@ function setLimit(max: number, v: Vector): Vector {
         }
       }
     }
+    resetMatrix();
     matrix.afterSync((mat, dt, t) => {
       counter++;
       if (counter > runUntil) {
@@ -123,7 +125,6 @@ function setLimit(max: number, v: Vector): Vector {
       setTimeout(() => matrix.sync(), 20);
     });
     matrix.sync();
-    // await wait(9999999);
   } catch (error) {
     console.error(`${__filename} caught: `, error);
   }
